@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Você decide o futuro da IA</title>
+    <!-- Link do Bootstrap (opcional, caso queira que os botões do JS funcionem com estilo padrão) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot; rel=" stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="caixa-principal">
-        <h1>Você decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado"></div>
-            <p class="texto-resultado"></p>
-        </div>
-    </div>
-    <script src="script.js"></script>     
+
+    <main class="container d-flex justify-content-center align-items-center min-vh-100">
+        <article class="card p-4 shadow-sm w-100" style="max-width: 600px;">
+            <h1 class="title h3 text-center mb-4">Você decide o futuro da IA</h1>
+
+            <!-- aria-live avisa leitores de tela quando o texto mudar dinamicamente via JS -->
+            <p id="description" class="description text-muted fs-5" aria-live="polite"></p>
+
+            <!-- d-grid gap-2 ajuda a empilhar os botões de forma elegante no Bootstrap -->
+            <div id="options-container" class="options-container d-grid gap-2 mt-4"></div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
